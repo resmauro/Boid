@@ -19,7 +19,7 @@ public class Game : GameWindow
     public Game(int width, int height, string title) : base(GameWindowSettings.Default, new NativeWindowSettings() { ClientSize = (width, height), Title = title })
     {
         camera = new Camera(new Vector3(0.0f, 0.0f, 30.0f), Vector3.Backward(), width, height);
-        shader = new Shader("C:\\Users\\frm\\OneDrive\\Desktop\\Otium\\Informatica\\Progetti\\Boid\\shader.vert", "C:\\Users\\frm\\OneDrive\\Desktop\\Otium\\Informatica\\Progetti\\Boid\\shader.frag", camera.projection, camera.view);
+        shader = new Shader("shader.vert", "shader.frag", camera.projection, camera.view);
     }
 
     protected override void OnLoad()
